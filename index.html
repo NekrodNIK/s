@@ -2,21 +2,19 @@
 <html>
 <head>
 	<title>1</title>
-	<link href="manifest.json">
-	<script type="text/javascript">
-		function registerServiceWorker() {
-// регистрирует скрипт sw в поддерживаемых браузерах
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js', { scope: '/' }).then(() => {
-      console.log('Service Worker registered successfully.');
-    }).catch(error => {
-      console.log('Service Worker registration failed:', error);
-    });
-  }
-}
-	</script>
+	<link rel="manifest" href="/manifest.json">
+	
 </head>
 <body>
-11e2emdcskvndwi
+  <script type="text/javascript">
+      if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js', { scope: '/' }).then(() => {
+      console.log('Service Worker registered successfully.');
+      }).catch(error => {
+      console.log('Service Worker registration failed:', error);
+      });
+      }
+  </script>
+  <h1>Nekrod</h1>
 </body>
 </html>
